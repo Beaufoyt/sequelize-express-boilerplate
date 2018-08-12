@@ -1,8 +1,8 @@
-import { models } from '../db.js';
+import { recipes } from '../models';
 
 module.exports = {
     fetchRecipes: (req, res) => {
-        models.recipes.findAll().then(recipes => {
+        recipes.findAll().then(recipes => {
             res.send(recipes);
         });
     },
